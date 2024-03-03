@@ -56,9 +56,14 @@
             &copy; 2024 Mikey.K. All rights reserved
         </footer>
         <script>
-            document.getElementById('playButton').addEventListener('click', function() {
-                document.getElementById('myAudio').play();
+          var audioElement = document.getElementById('myAudio');
+            var buttonElement = document.getElementById('playButton');
+            buttonElement.addEventListener('mousedown', function() {
+                audioElement.play();
             });
+            buttonElement.addEventListener('mouseup', function() {
+                audioElement.pause();
+            });  
         </script>
     </body>
 </html> 
