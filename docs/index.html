@@ -38,25 +38,10 @@
         </style>
     </head>
     <body>
-        <button id="playbutton">Play / Pause Background Music</button>
-<audio id="myAudio">
-    <source src="Graduation.mp3" type="audio/mpeg">  
-</audio>
-
-<script>
-    var audioElement = document.getElementById('myAudio');
-    var buttonElement = document.getElementById('playbutton'); // Corrected id
-    var isPlaying = true;
-
-    buttonElement.addEventListener('click', function() {
-        if (isPlaying) {
-            audioElement.pause();
-        } else {
-            audioElement.play();
-        }
-        isPlaying = !isPlaying;
-    });
-</script>
+         <button id="playbutton">Play / Pause Background Music</button>
+         <audio id="myAudio">
+             <source src="Graduation.mp3" type="audio/mpeg">  
+        </audio>
         <section>
          <h1>Mikey.K</h1>
          <img src="img/seaotter.png" alt="画像" width="310">
@@ -70,6 +55,20 @@
     　　 <footer>
             &copy; 2024 Mikey.K. All rights reserved
         </footer>
+        <script>
+            var audioElement = document.getElementById('myAudio');
+            var buttonElement = document.getElementById('playbutton'); // Corrected id
+            var isPlaying = true;
+        
+            buttonElement.addEventListener('click', function() {
+                if (isPlaying) {
+                    audioElement.pause();
+                } else {
+                    audioElement.play();
+                }
+                isPlaying = !isPlaying;
+            });
+        </script>
         
     </body>
 </html> 
