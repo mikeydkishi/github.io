@@ -39,7 +39,7 @@
     </head>
     <body>
         <button id="playbutton">Play Background Music</button>
-        <audio id="my Audio">
+        <audio id="my Audio" autoplay>
             <source src="Graduation.mp3" type="audio/mpeg">  
         </audio>
         <section>
@@ -57,13 +57,16 @@
             &copy; 2024 Mikey.K. All rights reserved
         </footer>
         <script>
-          var audioElement = document.getElementById('myAudio');
+           var audioElement = document.getElementById('myAudio');
             var buttonElement = document.getElementById('playButton');
-            buttonElement.addEventListener('mousedown', function() {
-                audioElement.play();
-            });
-            buttonElement.addEventListener('mouseup', function() {
-                audioElement.pause();
+            var isPlaying = true;
+            buttonElement.addEventListener('click', function() {
+                if (isPlaying) {
+                    audioElement.pause();
+                } else {
+                    audioElement.play();
+                }
+                isPlaying = !isPlaying;
             });  
         </script>
     </body>
