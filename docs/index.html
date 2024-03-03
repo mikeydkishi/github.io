@@ -29,6 +29,12 @@
                 bottom: 0;
                 width: 100%;
             }
+            button {
+                color: rgb(135, 95, 67);
+                background-color: antiquewhite;
+                border-color: bisque;
+                border-radius: 5%;
+            }
         </style>
     </head>
     <body>
@@ -42,8 +48,17 @@
          <p>mikeykhi@sample.com</p>
          <p>090-1234-5678</p>
         </section>
+        <button id="playbutton">Play Background Music</button>
+        <audio id="my Audio">
+            <source src="Graduation.mp3" type="audio/mpeg">  
+        </audio>
         <footer>
             &copy; 2024 Mikey.K. All rights reserved
         </footer>
+        <script>
+            document.getElementById('playButton').addEventListener('click', function() {
+                document.getElementById('myAudio').play();
+            });
+        </script>
     </body>
 </html> 
