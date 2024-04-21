@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="memo.css">
+   <title>My Memo</title>
+ </head>
+ <style>
+    button{
+      background-color: rgb(66, 84, 139);
+      border-radius: 13cm;
+      color: aliceblue;
+      font-size: 13px;
+      width: 20%;
+      padding: 2%;
+      font-family: 'Times New Roman', Times, serif;
+      padding-left: 10px;
+     }
+    h1,h2{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: rgb(99, 177, 179);
+      font: size 15px;;
+      }
+    input{
+      padding: 1%;
+      margin: 1%;
+    }
+    li{
+      background-color: rgb(220, 198, 148);
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 20px;
+      padding-left: 10px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    img{
+      display:block;
+      margin: 10px;
+      padding: 10px;
+    }
+    
+    
+ </style>
+ <body>
+   <h1>Memo</h1>
+   <div class="addMemo">
+     <input type="text" id="memoInput" placeholder="Type (^o^)" />
+     <input type="file" id="imageInput" />
+     <button onclick="addMemo()">Add Memo</button>
+   </div>
+   <div class="searchMemo">
+     <input type="text" id="searchInput" placeholder="Search |o_o|" />
+     <button onclick="searchMemo()">Search</button>
+     <button onclick="resetSearch()">Reset</button>
+   </div>
+   <div class="back">
+     <a href="index.html">Back to Home</a>
+   </div>
+   <h2>List</h2>
+   <div class="memoList">
+     <ul id="memoList"></ul>
+   </div>
+   <script src="memo.js"></script>
+ </body>
+</html>
